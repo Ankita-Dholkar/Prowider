@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 
-export interface IWebhookEvent extends Document {
+export interface IWebhookEvent extends Document<string> {
   _id: string; // idempotency key (sent by caller)
   type: string;
   processedAt: Date;
